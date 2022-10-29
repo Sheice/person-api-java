@@ -18,4 +18,8 @@ public class ServiceRepository {
         return (ArrayList<Person>)personRepository.findAll();
     }
 
+    public Person savePerson(Person person) {
+        return personRepository.save(person);
+    }
+
 }
