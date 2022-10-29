@@ -1,6 +1,7 @@
 package ar.com.sheice.api.controllers;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +32,7 @@ public class PersonController {
     }
 
     @GetMapping("/{id}")
-    public Person getOnePerson(@PathVariable Long id){
+    public Optional<Person> getOnePerson(@PathVariable Long id){
         return personService.getOnePerson(id);
     }
 

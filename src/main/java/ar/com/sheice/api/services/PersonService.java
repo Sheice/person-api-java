@@ -1,6 +1,7 @@
 package ar.com.sheice.api.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,10 @@ public class PersonService {
 
     public Person savePerson(Person person) {
         return personRepository.save(person);
+    }
+
+    public Optional<Person> getOnePerson(Long id) {
+        return personRepository.findById(id);
     }
 
 }
