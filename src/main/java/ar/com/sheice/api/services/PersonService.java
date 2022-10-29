@@ -31,4 +31,13 @@ public class PersonService {
         return personRepository.findByFirstName(firstName);
     }
 
+    public boolean deletePerson(Long id) {
+        try {
+            personRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }
