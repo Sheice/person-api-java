@@ -9,7 +9,7 @@ import ar.com.sheice.api.models.Person;
 import ar.com.sheice.api.repositories.PersonRepository;
 
 @Service
-public class ServiceRepository {
+public class PersonService {
     
     @Autowired
     private PersonRepository personRepository;
