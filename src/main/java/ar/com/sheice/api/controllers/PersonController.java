@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,6 +42,14 @@ public class PersonController {
     public ArrayList<Person> getPersonByFirstName(@RequestParam("firstName") String firstName){
         return personService.getPersonByFirstName(firstName);     
     }
+
+    @DeleteMapping("/{id}")
+    public String deletePerson(@PathVariable Long id){
+        if (personService.deletePerson(id)) {
+            return "Se eliminó a la persona " + id + " Correctamente";
+        }
+        return "Ocurrió un error, intentelo mas tarde";
+    } 
 
 
 }
