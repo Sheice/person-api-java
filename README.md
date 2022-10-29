@@ -5,4 +5,7 @@ We can add a person with name, last name and biography, also we can gett all per
 this is a simple basic api for learn java - spring boot by jaziel.
 
 
- ATTENTION you need add your database in application.properties.1 and put the name application.properties
+ ATTENTION you need add your database in application.properties like 
+ - Uri
+ - username
+ - password
